@@ -7,65 +7,77 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <header>
-  <div class="top-bar">
-    <img src="Images/logo.png" alt="Logo Garance" class="logo" />
-    <nav>
-      <a href="#WORK">Work</a>
-      <a href="#CONTACT">Contact</a>
-    </nav>
+
+  <header>
+    <div class="top-bar">
+      <img src="Images/logo.png" alt="Logo Garance" class="logo" />
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <hr class="separator" />
+
+<h1 class="intro-text">
+  <span class="fade delay-1">Good to see you here,</span><br>
+  <span class="fade delay-2">I'm Garance.</span>
+</h1>
+
+
+<a href="#work" class="scroll-arrow" aria-label="Scroll vers Work">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="6,8 12,14 18,8" stroke="red" stroke-width="1.5" fill="none"/>
+  </svg>
+</a>
+
+<header>
+
+  <main>
+  <section id="work">
+  <h2>Work</h2>
+  <div class="gallery">
+
+    <a href="NYC.html">
+      <img src="Images/NYC.png" alt="New York City Water Towers">
+    </a>
+
+    <a href="TT.html">
+      <img src="Images/Tactileties.png" alt="Tactile Ties">
+    </a>
+
+    <a href="polaris.html">
+      <img src="Images/polaris.png" alt="Polaris">
+    </a>
+
+    <a href="kaurna.html">
+      <img src="Images/kaurna.png" alt="Kaurna">
+    </a>
+
+    <a href="L'oiseau.html">
+      <img src="Images/l'oiseau.png" alt="L'oiseau">
+    </a>
+
   </div>
-
-  <h1 class="intro-text">
-    <span class="fade delay-2">Good to see you here,</span><br />
-    <span class="fade delay-3">I'm Garance.</span>
-  </h1>
-
-  <div class="scroll-arrow" id="scrollArrow" role="button" aria-label="Scroll to Work section" tabindex="0">
-    &#x2193;
-  </div>
-</header>
+</section>
 
 
- <main>
-     <section id="WORK">
-      <h2 class="bg-title">WORK</h2>
-
-      <div class="carousel-container">
-        <div class="arrow left" id="leftArrow">&#x2190;</div>
-        <div class="project-thumbs" id="carousel">
-          <a href="NYC.html"><img src="Images/NYC.png" alt="New York City Water Towers" /></a>
-          <a href="tactileties.html"><img src="Images/TT.png" alt="Tactile Ties" /></a>
-          <a href="polaris.html"><img src="Images/polaris.png" alt="Polaris" /></a>
-          <a href="kaurna.html"><img src="Images/kaurna.png" alt="Kaurna" /></a>
-          <a href="oiseau.html"><img src="Images/l'oiseau.png" alt="L'Oiseau" /></a>
-        </div>
-        <div class="arrow right" id="rightArrow">&#x2192;</div>
-      </div>
-    </section>
-
-    <section id="CONTACT">
-      <h2>CONTACT</h2>
-      <p>Email : <a href="mailto:garance.probsting@gmail.com">garance.probsting@gmail.com</a></p>
-      <p>Instagram : <a href="https://instagram.com/garanceprobsting" target="_blank">@garanceprobsting</a></p>
-    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+          </section>
   </main>
 
+<footer>
+  <p>Email : garance.probsting@gmail.com<br>Instagram : @garanceprobsting </p>
+</footer>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const arrow = document.getElementById('scrollArrow');
-      setTimeout(() => {
-        arrow.classList.add('visible');
-      }, 1000);
+<footer>
+  <p>© Garance Pröbsting 2025, all rights reserved </p>
+</footer>
 
-      arrow.addEventListener('click', () => {
-        const work = document.getElementById('WORK'); // MAJUSCULE ici !
-        if (work) {
-          work.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
+
+
+
 </body>
 </html>
+
