@@ -1,0 +1,510 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #111;
+  line-height: 1.6;
+  background-color: white; /* Fond blanc par défaut */
+}
+
+body{
+  background-image: url('Images/bg.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #111;
+  background-color: transparent !important; /* Pour ne pas être caché par le blanc */
+
+}
+
+
+header {
+  padding: 2rem;
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  /* ou height: 70px; */
+  /* ou encore mieux : */
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 60px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-weight: 300;
+  text-decoration: none;
+  color: #111;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+.separator {
+  margin: 2rem auto 1.5rem auto;
+  width: 90%;
+  border: none;
+  border-top: none;
+}
+
+.intro-text {
+  font-family: 'Dot Matrix', sans-serif;
+  font-weight: 300;
+  font-size: 90px;
+  margin: 0 auto 5rem auto;
+  text-align: center;
+  padding-top : 5rem;
+  color: red;
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  margin-top: 1rem;
+}
+
+.intro p {
+  font-size: 10px;
+  font-family: Helvetica, sans-serif;
+
+}
+.fade {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.90s;
+}
+
+.delay-2 {
+  animation-delay: 2.3s;
+}
+
+
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2rem 1rem;
+
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.gallery a {
+  flex-shrink: 0;
+}
+
+.gallery a img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2rem 1rem;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE / Edge */
+}
+.gallery::-webkit-scrollbar {
+  display: none;               /* Chrome/Safari */
+}
+
+.gallery a {
+  flex-shrink: 0;              /* ← empêche les images de se réduire */
+}
+
+.gallery a img {
+  width: 300px;                /* ← fixe une largeur pour garantir le débordement */
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery a img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+h2 {
+  font-family: 'Dot Matrix', sans-serif;
+  color: red;
+  text-align: Center;
+  font-weight: 300;
+  font-size: 90px;
+  text-align: Center;
+  margin-top: 20rem;
+  margin-bottom: 4rem;
+animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+#work  {
+  scroll-margin-top: 20vh;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+
+.project-list a {
+  text-decoration: none;
+  color: #111;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 15px;
+  font-family: Helvetica, sans-serif;
+  color: #333; 
+}
+
+.project-page {
+  text-align: center;
+  margin: 5rem auto;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.project-title {
+  font-family: Helvetica, sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 30px;
+  margin-bottom: 0.5rem;
+}
+
+.project-date {
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+.project-description {
+  font-size: 15px;
+  margin-bottom: 3rem;
+}
+
+.project-images img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+font-family: 'Dot Matrix', sans-serif;
+  color: red;
+  text-align: Center;
+  font-weight: 300;
+  font-size: 50px;
+  text-align: Center;
+  margin-top: 5rem;
+  margin-bottom: 0rem;
+
+}
+
+header a {
+  display: inline-block;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+/* Contenu principal */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+main p {
+  font-size: 15px;
+  max-width: 600px;
+  margin: 5rem;
+  text-aligh : center;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 15px;
+  text-align: Center;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+} 
+
+
+.fade {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} /* <- fermer ici la règle fadeIn */
+
+.scroll-arrow {
+  font-size: 40px;
+  color: red;
+  display: inline-block;
+  margin-top: 2rem;
+  cursor: pointer;
+  opacity: 1; /* cachée par défaut */
+  transition: opacity 1 ease;
+  user-select: none;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow.visible {
+  opacity: 1; /* visible quand la classe est ajoutée */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Dot+Matrix&display=swap');
+
+}
+.gallery {
+  position: relative;
+  z-index: 1;
+}
+}
+
+.project-thumbs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 2rem 1rem;
+}
+
+.project-thumbs a {
+  flex-shrink: 0;
+}
+
+.project-thumbs a img {
+  width: 110px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+
+h4 {
+  font-family: 'Dot Matrix', sans-serif;
+  color: red;
+  text-align: Center;
+  font-weight: 300;
+  font-size: 50px;
+  text-align: Center;
+  margin-top: 20rem;
+  margin-bottom: 4rem;
+  scroll-margin-top: 20vh;
+}
+html {
+  scroll-behavior: smooth;
+
+}
+.back-icon {
+  width: 30px;       /* taille du bouton retour */
+  height: auto;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.back-icon:hover {
+  transform: scale(1.1);
+
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-thumbs {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 1rem;
+  max-width: 90vw;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+.project-thumbs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.project-thumbs a img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.project-thumbs a img:hover {
+  transform: scale(1.05);
+}
+
+.arrow {
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#WORK h2.bg-title,
+#CONTACT h2 {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
