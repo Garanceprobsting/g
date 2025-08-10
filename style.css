@@ -66,7 +66,7 @@ nav a:hover {
   border: none;
   border-top: none;
 }
-@import url('https://fonts.googleapis.com/css2?family=Dot+Matrix&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotMatrix&display=swap');
 
 .intro-text {
   font-family: 'Dot Matrix', sans-serif;
@@ -76,6 +76,7 @@ nav a:hover {
   text-align: center;
   padding-top : 5rem;
   color: red;
+}
 
 .intro {
   display: flex;
@@ -179,6 +180,9 @@ nav a:hover {
 
 
 h2 {
+
+@import url('https://fonts.googleapis.com/css2?family=DotMatrix&display=swap');
+
   font-family: 'Dot Matrix', sans-serif;
   color: red;
   text-align: Center;
@@ -282,7 +286,7 @@ header {
   text-align: center;
   margin-bottom: 3rem;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=DotMatrix&display=swap');
 header h1 {
 font-family: 'Dot Matrix', sans-serif;
   color: red;
@@ -381,6 +385,7 @@ h3 {
   50% {
     transform: translateY(8px);
   }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Dot+Matrix&display=swap');
 
@@ -507,6 +512,29 @@ html {
     opacity: 0;
   }
 }
+@font-face {
+  font-family: 'Dot Matrix';
+  src: url('fonts/DotMatrix.woff2') format('woff2'),
+       url('fonts/DotMatrix.woff') format('woff'),
+       url('fonts/DotMatrix.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  @media (max-width: 768px) {
 
+    }
+
+#CONTACT {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* centre horizontalement */
+  text-align: center;     /* centre le texte */
+  padding: 1rem;
+}
+
+#CONTACT p, 
+#CONTACT a {
+  margin: 0.5rem 0;
+  display: inline-block;
+}
 
 
