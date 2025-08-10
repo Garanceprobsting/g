@@ -66,6 +66,7 @@ nav a:hover {
   border: none;
   border-top: none;
 }
+@import url('https://fonts.googleapis.com/css2?family=Dot+Matrix&display=swap');
 
 .intro-text {
   font-family: 'Dot Matrix', sans-serif;
@@ -506,5 +507,6 @@ html {
     opacity: 0;
   }
 }
+
 
 
