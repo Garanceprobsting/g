@@ -69,7 +69,7 @@ nav a:hover {
 @import url('https://fonts.googleapis.com/css2?family=DotMatrix&display=swap');
 
 .intro-text {
-  font-family: 'DotMatrix', sans-serif;
+  font-family: 'Dot Matrix', sans-serif;
   font-weight: 300;
   font-size: 90px;
   margin: 0 auto 5rem auto;
@@ -179,7 +179,10 @@ nav a:hover {
 
 
 h2 {
-  font-family: 'DotMatrix', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=DotMatrix&display=swap');
+
+  font-family: 'Dot Matrix', sans-serif;
   color: red;
   text-align: Center;
   font-weight: 300;
@@ -282,9 +285,9 @@ header {
   text-align: center;
   margin-bottom: 3rem;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=DotMatrix&display=swap');
 header h1 {
-font-family: 'DotMatrix', sans-serif;
+font-family: 'Dot Matrix', sans-serif;
   color: red;
   text-align: Center;
   font-weight: 300;
@@ -382,7 +385,7 @@ h3 {
     transform: translateY(8px);
   }
 
-@import url('https://fonts.googleapis.com/css2?family=DotMatrix&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dot+Matrix&display=swap');
 
 }
 .gallery {
@@ -420,7 +423,7 @@ h3 {
   }
 
 h4 {
-  font-family: 'DotMatrix', sans-serif;
+  font-family: 'Dot Matrix', sans-serif;
   color: red;
   text-align: Center;
   font-weight: 300;
@@ -508,7 +511,7 @@ html {
   }
 }
 @font-face {
-  font-family: 'DotMatrix';
+  font-family: 'Dot Matrix';
   src: url('fonts/DotMatrix.woff2') format('woff2'),
        url('fonts/DotMatrix.woff') format('woff'),
        url('fonts/DotMatrix.ttf') format('truetype');
@@ -522,13 +525,3 @@ html {
     padding: 0 1rem; /* pour éviter que ça touche les bords */
   }
 }
-
-
-
-
-
-
-
-
-
-
