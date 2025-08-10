@@ -211,8 +211,9 @@ animation: blink 2s infinite;
     opacity: 0;
   }
 }
-#WORK  {
-  scroll-margin-top: 80vh;
+#work {
+  scroll-margin-top: 5px;
+
 
 }
 html {
@@ -535,6 +536,7 @@ html {
   .project-thumbs {
     max-height: 100px; /* enlève une éventuelle limite de hauteur */
     padding: 1rem 0; /* un peu d’air autour */
+
 
 
 
