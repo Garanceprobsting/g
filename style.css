@@ -507,6 +507,16 @@ html {
     opacity: 0;
   }
 }
+@font-face {
+  font-family: 'Dot Matrix';
+  src: url('fonts/DotMatrix.woff2') format('woff2'),
+       url('fonts/DotMatrix.woff') format('woff'),
+       url('fonts/DotMatrix.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+
+
 
 
 
