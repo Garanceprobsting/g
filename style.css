@@ -382,7 +382,7 @@ h3 {
     transform: translateY(8px);
   }
 
-@import url('https://fonts.googleapis.com/css2?family=Dot+Matrix&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotMatrix&display=swap');
 
 }
 .gallery {
@@ -420,7 +420,7 @@ h3 {
   }
 
 h4 {
-  font-family: 'Dot Matrix', sans-serif;
+  font-family: 'DotMatrix', sans-serif;
   color: red;
   text-align: Center;
   font-weight: 300;
@@ -508,7 +508,7 @@ html {
   }
 }
 @font-face {
-  font-family: 'Dot Matrix';
+  font-family: 'DotMatrix';
   src: url('fonts/DotMatrix.woff2') format('woff2'),
        url('fonts/DotMatrix.woff') format('woff'),
        url('fonts/DotMatrix.ttf') format('truetype');
@@ -522,6 +522,7 @@ html {
     padding: 0 1rem; /* pour éviter que ça touche les bords */
   }
 }
+
 
 
 
