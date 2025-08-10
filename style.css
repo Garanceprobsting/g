@@ -534,11 +534,5 @@ html {
 #CONTACT p { margin: .5rem 0; max-width:720px; }
 #CONTACT a { display:inline-block; margin:.25rem 0; }
 
-/* Responsive tweaks */
-@media (max-width: 480px) {
-  .intro-text { font-size: 48px; padding-top:3rem; }
-  #CONTACT p { font-size: 15px; }
-  .project-thumbs img, .gallery img { width: 220px; }
-}
 
 
