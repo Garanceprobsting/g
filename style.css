@@ -511,7 +511,7 @@ html {
   }
 }
 @font-face {
-  font-family: 'DotMatrix';
+  font-family: 'Dot Matrix';
   src: url('Images/DotMatrix.woff2') format('woff2'),
        url('Images/DotMatrix.woff') format('woff'),
        url('Images/DotMatrix.ttf') format('truetype');
@@ -533,6 +533,7 @@ html {
 }
 #CONTACT p { margin: .5rem 0; max-width:720px; }
 #CONTACT a { display:inline-block; margin:.25rem 0; }
+
 
 
 
