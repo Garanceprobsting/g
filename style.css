@@ -514,6 +514,16 @@ html {
        url('fonts/DotMatrix.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  @media (max-width: 768px) {
+
+    }
+  #CONTACT {
+    text-align: center;
+    padding: 0 1rem; /* pour éviter que ça touche les bords */
+  }
+}
+
+
 
 
 
