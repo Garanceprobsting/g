@@ -149,7 +149,7 @@ nav a:hover {
 }
 
 .gallery a img {
-  width: 200px;
+ max-width: 100%;
   height: auto;
   border-radius: 8px;
   display: block;
@@ -178,7 +178,7 @@ nav a:hover {
 }
 
 .gallery a img {
-  width: 300px;                /* ← fixe une largeur pour garantir le débordement */
+ max-width: 100%;               /* ← fixe une largeur pour garantir le débordement */
   height: auto;
   border-radius: 8px;
   display: block;
@@ -416,7 +416,7 @@ h3 {
 }
 
 .project-thumbs a img {
-  width: 110px;
+  width: 100px;
   height: auto;
   border-radius: 8px;
   display: block;
@@ -537,6 +537,12 @@ html {
   #CONTACT p { font-size: 15px; }
   .project-thumbs img, .gallery img { width: 220px; }
 }
+@media (max-width: 480px) {
+  .gallery a img {
+    width: 150px;  /* taille adaptée au mobile */
+  }
+}
+
 
 
 
