@@ -74,9 +74,9 @@ nav a:hover {
 
 @font-face {
   font-family: 'DotMatrix';
-  src: url('Fonts/DotMatrix.woff2') format('woff2'),
-       url('Fonts/DotMatrix.woff') format('woff'),
-       url('Fonts/DotMatrix.ttf') format('truetype');
+  src: url('Images/DotMatrix.woff2') format('woff2'),
+       url('Images/DotMatrix.woff') format('woff'),
+       url('Images/DotMatrix.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -537,5 +537,6 @@ html {
   #CONTACT p { font-size: 15px; }
   .project-thumbs img, .gallery img { width: 220px; }
 }
+
 
 
