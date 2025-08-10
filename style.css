@@ -73,7 +73,7 @@ nav a:hover {
 
 
 .intro-text {
-  font-family: 'Dot Matrix', sans-serif;
+  font-family: 'DotMatrix', sans-serif;
   font-weight: 300;
   font-size: 90px;
   margin: 0 auto 5rem auto;
@@ -185,7 +185,7 @@ nav a:hover {
 
 h2 {
 
-  font-family: 'Dot Matrix', sans-serif;
+  font-family: 'DotMatrix', sans-serif;
   color: red;
   text-align: Center;
   font-weight: 300;
@@ -289,7 +289,7 @@ header {
   margin-bottom: 3rem;
 }
 header h1 {
-font-family: 'Dot Matrix', sans-serif;
+font-family: 'DotMatrix', sans-serif;
   color: red;
   text-align: Center;
   font-weight: 300;
@@ -423,7 +423,7 @@ h3 {
   }
 
 h4 {
-  font-family: 'Dot Matrix', sans-serif;
+  font-family: 'DotMatrix', sans-serif;
   color: red;
   text-align: Center;
   font-weight: 300;
@@ -511,7 +511,7 @@ html {
   }
 }
 @font-face {
-  font-family: 'Dot Matrix';
+  font-family: 'DotMatrix';
   src: url('Images/DotMatrix.woff2') format('woff2'),
        url('Images/DotMatrix.woff') format('woff'),
        url('Images/DotMatrix.ttf') format('truetype');
@@ -533,6 +533,7 @@ html {
 }
 #CONTACT p { margin: .5rem 0; max-width:720px; }
 #CONTACT a { display:inline-block; margin:.25rem 0; }
+
 
 
 
