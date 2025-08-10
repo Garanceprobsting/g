@@ -546,3 +546,5 @@ html {
   #CONTACT p { font-size: 15px; }
   .project-thumbs img, .gallery img { width: 220px; }
 }
+font-display: swap;
+
