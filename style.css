@@ -786,22 +786,14 @@ html {
   width: 100%; /* prends toute la largeur */
 }
 
-.carousel-wrapper, .carousel {
-
-
-  width: 80vw;            /* prend toute la largeur du viewport */
-
-
-  max-width: 80vw;
-
-
-  margin-left: calc(-50vw + 50%); /* recentre horizontalement en compensant le padding */
-
-
+.carousel-wrapper {
+  width: 80vw;
+  margin: 0 auto; /* centre horizontalement */
   padding: 0 20px;
-
-
   box-sizing: border-box;
+}
+
+
 
 
 
