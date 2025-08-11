@@ -739,8 +739,8 @@ html {
   font-size: 4rem; /* augmente la taille du titre */
   /* tu peux aussi modifier la graisse, couleur, etc. */
 }
-h1 {
-  font-size: 5rem; /* augmente la taille du titre */
+intro-text {
+  font-size: 3rem; /* augmente la taille du titre */
   /* tu peux aussi modifier la graisse, couleur, etc. */
 }
 
@@ -802,6 +802,7 @@ h1 {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 
 
 
