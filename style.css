@@ -735,15 +735,25 @@ html {
 
 /* MEDIA QUERY pour mobile */
 @media (max-width: 500px) {
-  .carousel-wrapper {
-    max-width: 100% !important;
-    padding: 0 40px !important; /* un peu moins d’espace pour les flèches */
+ .carousel-wrapper {
+  padding: 0 20px; /* réduire fortement, mais garder un peu d’espace pour les flèches */
+  max-width: 1000px; /* ou mettre width: 100% si tu veux que ça prenne toute la largeur */
+  margin: 30px auto;
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
   }
   
-  .carousel img {
-    max-height: 180px !important;
-    max-width: 100% !important;
-  }
+.carousel img {
+  max-height: 320px; /* tu peux augmenter si tu veux */
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
 
   .carousel-btn {
     width: 30px !important;
@@ -759,6 +769,18 @@ html {
     right: 5px !important;
   }
 }
+.carousel {
+  display: flex;
+  gap: 10px; /* réduire un peu le gap entre images */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100%; /* prends toute la largeur */
+}
+
+
 
 
 
