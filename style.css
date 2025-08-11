@@ -556,57 +556,32 @@ html {
   .gallery a img {
     width: 180px;
   }
-/* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
-.carousel-wrapper {
-  position: relative;
-  max-width: 1000px; /* adapte si besoin */
-  margin: 30px auto;
-  padding: 0 60px; /* <-- important : réserve l'espace pour les flèches */
-  box-sizing: border-box;
-}
-
-/* piste (les images) */
-.carousel {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 10px 0;
-  -ms-overflow-style: none; /* IE/Edge */
-  scrollbar-width: none;    /* Firefox */
-}
-.carousel::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-
-/* cartes / images */
-.carousel a { flex: 0 0 auto; text-decoration: none; }
-.carousel img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-height: 320px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* flèches : dans l'espace blanc, sans effet bouton */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 44px; /* zone cliquable large mais invisible */
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none; /* pas de fond */
-  border: none;     /* pas de bordure */
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
   padding: 0;
   margin: 0;
   cursor: pointer;
   z-index: 30;
 }
-.carousel-btn:focus {
-  outline: none; /* pas de contour au clic */
+
+.carousel-btn svg {
+  width: 24px;  /* taille du SVG */
+  height: 24px;
 }
 
-/* position des flèches */
+.carousel-btn:focus {
+  outline: none !important;
+}
+
 .carousel-btn.left  { left: 12px; }
 .carousel-btn.right { right: 12px; }
