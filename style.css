@@ -212,12 +212,11 @@ animation: blink 2s infinite;
   }
 }
 #WORK  {
-  scroll-margin-top: 20vh;
+  scroll-margin-top: 5px;
 
 }
 html {
   scroll-behavior: smooth;
-}
 
 }
 
@@ -560,6 +559,7 @@ html {
     width: 180px;
   }
 }
+
 
 
 
