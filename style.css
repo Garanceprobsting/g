@@ -785,9 +785,10 @@ html {
 /* MEDIA QUERY pour mobile */
 @media (max-width: 500px) {
 intro-text {
-  font-size: 1rem; /* augmente la taille du titre */
+  font-size: -1rem; /* augmente la taille du titre */
   /* tu peux aussi modifier la graisse, couleur, etc. */
 }
+
 
 
 
