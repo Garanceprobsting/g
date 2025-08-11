@@ -747,7 +747,7 @@ html {
   }
   
 .carousel img {
-  max-height: 400px; /* tu peux augmenter si tu veux */
+  max-height: 350px; /* tu peux augmenter si tu veux */
   width: auto;
   height: auto;
   border-radius: 4px;
@@ -792,6 +792,7 @@ html {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 
 
 
