@@ -556,7 +556,7 @@ html {
     width: 180px;
   }
 }
-* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
+/* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
 .carousel-wrapper {
   position: relative;
   max-width: 1000px; /* adapte si besoin */
@@ -575,55 +575,86 @@ html {
   -ms-overflow-style: none; /* IE/Edge */
   scrollbar-width: none;    /* Firefox */
 }
-.carousel::-webkit-scrollbar {
-  display: none;
-  height: 0;
-}
+.carousel::-webkit-scrollbar { display: none; height: 0; } /* Chrome/Safari */
 
 /* cartes / images */
-.carousel a {
-  flex: 0 0 auto;
-  text-decoration: none;
-}
+.carousel a { flex: 0 0 auto; text-decoration: none; }
 .carousel img {
   display: block;
-  width: auto;        /* ne force pas la largeur */
+  width: auto;       /* on ne force pas la largeur */
   height: auto;
-  max-height: 320px;  /* limite la hauteur */
+  max-height: 320px; /* limite la hauteur pour garder une ligne propre */
   object-fit: cover;
   border-radius: 4px;
 }
 
-/* flèches : dans l'espace blanc, sans effet bouton */
+/* flèches : dans l'espace blanc (grâce au padding du wrapper) */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.95);
+  font-size: 22px;
+  color: #d21b1b; /* rouge */
+  cursor: pointer;
+  z-index: 30;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* On place les boutons dans la zone blanche (padding) du wrapper */
+.carousel-btn.left  { left: 12px; }  /* visible dans la zone blanche réservée */
+.carousel-btn.right { right: 12px; }
+
+/* petit style focus pour accessibilité */
+.carousel-btn:focus { outline: 2px solid rgba(210,27,27,0.25); }
+.carousel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 60px; /* espace blanc pour flèches */
+  box-sizing: border-box;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar { display: none; }
+
+.carousel a { flex: 0 0 auto; }
+.carousel img {
+  display: block;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
   border: none;
-  padding: 0;
-  margin: 0;
   cursor: pointer;
   z-index: 30;
 }
-.carousel-btn:focus {
-  outline: none;
-}
 
-/* position des boutons */
-.carousel-btn.left {
-  left: 12px;
-}
-.carousel-btn.right {
-  right: 12px;
-}
-
-/* focus accessibilité */
-.carousel-btn:focus {
-  outline: 2px solid rgba(210, 27, 27, 0.25);
-}
-
-
+.carousel-btn.left { left: 12px; }
+.carousel-btn.right { right: 12px; }
