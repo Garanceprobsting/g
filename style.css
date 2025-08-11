@@ -556,32 +556,79 @@ html {
   .gallery a img {
     width: 180px;
   }
+.carousel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 60px; /* espace blanc à gauche/droite pour les flèches */
+  box-sizing: border-box;
+  overflow: hidden; /* pour éviter que les flèches débordent */
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;    /* Firefox */
+  scroll-snap-type: x mandatory; /* pour un défilement plus fluide */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel a {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.carousel img {
+  display: block;
+  height: auto;
+  max-height: 320px; /* limite la hauteur */
+  width: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* flèches sans fond, sans ombre, juste zone cliquable */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px; /* zone cliquable large mais invisible */
+  width: 44px;
   height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: none !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0;
   margin: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 30;
-}
-
-.carousel-btn svg {
-  width: 24px;  /* taille du SVG */
-  height: 24px;
 }
 
 .carousel-btn:focus {
   outline: none !important;
 }
 
-.carousel-btn.left  { left: 12px; }
-.carousel-btn.right { right: 12px; }
+.carousel-btn.left {
+  left: 12px;
+}
+
+.carousel-btn.right {
+  right: 12px;
+}
+
+.carousel-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: #d21b1b; /* rouge */
+  stroke-width: 1.5;
+  fill: none;
+}
