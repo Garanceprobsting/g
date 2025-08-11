@@ -785,9 +785,10 @@ html {
 /* MEDIA QUERY pour mobile */
 @media (max-width: 500px) {
   .intro-text {
-    font-size: 10rem;
+    font-size: 3.5rem;
   }
 }
+
 
 
 
