@@ -756,10 +756,10 @@ html {
 }
 
 .carousel-btn.left {
-  left: -10px; /* très proche du bord */
+  left: -20px; /* très proche du bord */
 }
 .carousel-btn.right {
-  right: -10px;
+  right: -20px;
 }
 .carousel-btn {
   width: 40px;
@@ -787,6 +787,7 @@ html {
   scrollbar-width: none;
   width: 100%; /* prends toute la largeur */
 }
+
 
 
 
