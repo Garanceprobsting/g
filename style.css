@@ -122,20 +122,34 @@ nav a:hover {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 10px;          /* réduit un peu l’écart, tu peux ajuster */
-  padding: 2rem 1rem; /* tu peux garder ton padding */
-  -webkit-overflow-scrolling: touch; /* scroll fluide sur iOS */
+  gap: 1rem;
+  padding: 1rem 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(0,0,0,0.3) transparent;
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+.gallery a {
+  flex: 0 0 auto; /* empêche le lien de rétrécir */
+  scroll-snap-align: start;
 }
 
 .gallery img {
-  flex-shrink: 0;
-  width: 200px; /* fixe une largeur pour que le scroll fonctionne bien */
+  display: block;
+  width: 200px;
   height: auto;
-  object-fit: cover;
   border-radius: 8px;
   user-select: none;
   -webkit-user-drag: none;
-  scroll-snap-align: start;
   transition: transform 0.3s ease;
 
 }
@@ -560,6 +574,7 @@ html {
     width: 180px;
   }
 }
+
 
 
 
