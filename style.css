@@ -556,47 +556,62 @@ html {
     width: 180px;
   }
 }
+/* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
 .carousel-wrapper {
   position: relative;
-  max-width: 900px; /* adapte si tu veux plus large */
-  margin: auto;
+  max-width: 1000px; /* adapte si besoin */
+  margin: 30px auto;
+  padding: 0 60px; /* <-- important : réserve l'espace pour les flèches */
+  box-sizing: border-box;
 }
 
+/* piste (les images) */
 .carousel {
   display: flex;
+  gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 10px;
-  padding: 10px 40px; /* espace pour les flèches */
+  padding: 10px 0; /* pas de padding horizontal ici, on a le wrapper pour ça */
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;    /* Firefox */
 }
+.carousel::-webkit-scrollbar { display: none; height: 0; } /* Chrome/Safari */
 
-.carousel a {
-  flex: 0 0 auto;
-}
-
+/* cartes / images */
+.carousel a { flex: 0 0 auto; text-decoration: none; }
 .carousel img {
-  width: auto;
-  height: auto;
-  max-height: 300px; /* garde la taille raisonnable */
   display: block;
+  width: auto;       /* on ne force pas la largeur */
+  height: auto;
+  max-height: 320px; /* limite la hauteur pour garder une ligne propre */
+  object-fit: cover;
+  border-radius: 4px;
 }
 
+/* flèches : dans l'espace blanc (grâce au padding du wrapper) */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;
-  background: rgba(255, 255, 255, 0.7);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.95);
+  font-size: 22px;
+  color: #d21b1b; /* rouge */
   cursor: pointer;
-  color: red;
-  z-index: 10;
+  z-index: 30;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.carousel-btn.left {
-  left: 0;
-}
+/* On place les boutons dans la zone blanche (padding) du wrapper */
+.carousel-btn.left  { left: 12px; }  /* visible dans la zone blanche réservée */
+.carousel-btn.right { right: 12px; }
 
-.carousel-btn.right {
-  right: 0;
-}
+/* petit style focus pour accessibilité */
+.carousel-btn:focus { outline: 2px solid rgba(210,27,27,0.25); }
+
