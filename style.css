@@ -787,6 +787,25 @@ html {
   scrollbar-width: none;
   width: 100%; /* prends toute la largeur */
 }
+.carousel-wrapper {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+  margin: 30px auto;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 100%;
+}
+
+main, section#work {
+  max-width: none;
+  width: 100%;
+  padding: 0 10px;
+}
+
 
 
 
