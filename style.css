@@ -527,7 +527,7 @@ html {
 #CONTACT a { display:inline-block; margin:.25rem 0; }
 }
 /* Version mobile : max 768px */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .intro-text {
     font-size: 60px; /* Texte d'intro plus petit */
     line-height: 1.2;
@@ -734,7 +734,7 @@ html {
 }
 
 /* MEDIA QUERY pour mobile */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .carousel-wrapper {
     max-width: 100% !important;
     padding: 0 40px !important; /* un peu moins d’espace pour les flèches */
@@ -759,6 +759,7 @@ html {
     right: 5px !important;
   }
 }
+
 
 
 
