@@ -739,12 +739,6 @@ html {
   font-size: 4rem; /* augmente la taille du titre */
   /* tu peux aussi modifier la graisse, couleur, etc. */
 }
-intro-text {
-  font-size: 3rem; /* augmente la taille du titre */
-  /* tu peux aussi modifier la graisse, couleur, etc. */
-}
-
-
  .carousel-wrapper {
   padding: 0 20px; /* réduire fortement, mais garder un peu d’espace pour les flèches */
   max-width: 1000px; /* ou mettre width: 100% si tu veux que ça prenne toute la largeur */
@@ -801,6 +795,12 @@ intro-text {
   margin: 0 auto; /* centre horizontalement */
   padding: 0 20px;
   box-sizing: border-box;
+}
+/* MEDIA QUERY pour mobile */
+@media (max-width: 500px) {
+intro-text {
+  font-size: 3rem; /* augmente la taille du titre */
+  /* tu peux aussi modifier la graisse, couleur, etc. */
 }
 
 
