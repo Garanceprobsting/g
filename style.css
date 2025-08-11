@@ -454,12 +454,133 @@ html {
 
 }
 
-.carousel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+.<section id="work">
+  <h2>Work</h2>
+
+  <div class="carousel">
+
+    <!-- Inputs radio invisibles -->
+    <input type="radio" name="slides" id="slide1" checked>
+    <input type="radio" name="slides" id="slide2">
+    <input type="radio" name="slides" id="slide3">
+    <input type="radio" name="slides" id="slide4">
+    <input type="radio" name="slides" id="slide5">
+
+    <!-- Conteneur des images -->
+    <div class="slides">
+      <div class="slide"><a href="NYC.html"><img src="Images/NYC.png" alt="New York City Water Towers"></a></div>
+      <div class="slide"><a href="TT.html"><img src="Images/Tactileties.png" alt="Tactile Ties"></a></div>
+      <div class="slide"><a href="Polaris.html"><img src="Images/Polaris.png" alt="Polaris"></a></div>
+      <div class="slide"><a href="Kaurna.html"><img src="Images/Kaurna.png" alt="Kaurna"></a></div>
+      <div class="slide"><a href="L'oiseau.html"><img src="Images/l'oiseau.png" alt="L'oiseau"></a></div>
+    </div>
+
+    <!-- Flèche gauche unique -->
+    <label for="slide5" class="prev prev1">&#9664;</label>
+    <label for="slide1" class="prev prev2">&#9664;</label>
+    <label for="slide2" class="prev prev3">&#9664;</label>
+    <label for="slide3" class="prev prev4">&#9664;</label>
+    <label for="slide4" class="prev prev5">&#9664;</label>
+
+    <!-- Flèche droite unique -->
+    <label for="slide2" class="next next1">&#9654;</label>
+    <label for="slide3" class="next next2">&#9654;</label>
+    <label for="slide4" class="next next3">&#9654;</label>
+    <label for="slide5" class="next next4">&#9654;</label>
+    <label for="slide1" class="next next5">&#9654;</label>
+
+  </div>
+</section>
+
+<style>
+  .carousel {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .slides {
+    display: flex;
+    width: 1600px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 320px;
+  }
+
+  .slide img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+  }
+
+  /* Position flèches */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 2.5rem;
+    color: red;
+    background: rgba(255,255,255,0.7);
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+    pointer-events: auto;
+    display: none; /* masquées par défaut */
+    z-index: 10;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
+  }
+
+  /* Afficher la bonne flèche prev selon la slide sélectionnée */
+  #slide1:checked ~ .prev.prev1,
+  #slide2:checked ~ .prev.prev2,
+  #slide3:checked ~ .prev.prev3,
+  #slide4:checked ~ .prev.prev4,
+  #slide5:checked ~ .prev.prev5 {
+    display: block;
+  }
+
+  /* Afficher la bonne flèche next selon la slide sélectionnée */
+  #slide1:checked ~ .next.next1,
+  #slide2:checked ~ .next.next2,
+  #slide3:checked ~ .next.next3,
+  #slide4:checked ~ .next.next4,
+  #slide5:checked ~ .next.next5 {
+    display: block;
+  }
+
+  /* Déplacement des slides */
+  #slide1:checked ~ .slides {
+    transform: translateX(0);
+  }
+  #slide2:checked ~ .slides {
+    transform: translateX(-320px);
+  }
+  #slide3:checked ~ .slides {
+    transform: translateX(-640px);
+  }
+  #slide4:checked ~ .slides {
+    transform: translateX(-960px);
+  }
+  #slide5:checked ~ .slides {
+    transform: translateX(-1280px);
+  }
+</style>
+
 }
 
 .project-thumbs {
@@ -557,6 +678,7 @@ html {
     width: 180px;
   }
 }
+
 
 
 
