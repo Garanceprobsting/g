@@ -174,7 +174,7 @@ nav a:hover {
 }
 
 .gallery a img {
-  width: 300px;                /* ← fixe une largeur pour garantir le débordement */
+  width: 200px;                /* ← fixe une largeur pour garantir le débordement */
   height: auto;
   border-radius: 8px;
   display: block;
@@ -611,4 +611,5 @@ html {
 /* position des flèches */
 .carousel-btn.left  { left: 12px; }
 .carousel-btn.right { right: 12px; }
+
 
