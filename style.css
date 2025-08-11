@@ -457,54 +457,46 @@ html {
   transform: scale(1.1);
 
 }
-
 .carousel-container {
   position: relative;
-   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 50%;
-  padding: 0.5rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.arrow-left {
-  left: 5px;
-}
-
-.arrow-right {
-  right: 5px;
+  align-items: center; /* <-- Aligne les flèches verticalement au centre */
 }
 
 .project-thumbs {
   display: flex;
   overflow-x: auto;
-  scroll-behavior: smooth;
   gap: 20px;
   padding: 1rem;
-  max-width: 90vw;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .project-thumbs::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .project-thumbs a img {
   width: 150px;
   height: auto;
   border-radius: 8px;
-  transition: transform 0.3s ease;
+}
+
+.arrow {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 5;
+}
+.arrow-left {
+  position: absolute;
+  left: 5px;
+}
+.arrow-right {
+  position: absolute;
+  right: 5px;
+}
   cursor: pointer;
 }
 .project-thumbs a img:hover {
@@ -581,5 +573,6 @@ html {
     width: 120px;
   }
 }
+
 
 
