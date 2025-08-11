@@ -556,15 +556,17 @@ html {
   .gallery a img {
     width: 180px;
   }
+
+  /* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
 .carousel-wrapper {
   position: relative;
-  max-width: 1000px;
+  max-width: 1000px; /* adapte si besoin */
   margin: 30px auto;
-  padding: 0 60px; /* espace blanc à gauche/droite pour les flèches */
+  padding: 0 60px; /* <-- important : réserve l'espace pour les flèches */
   box-sizing: border-box;
-  overflow: hidden; /* pour éviter que les flèches débordent */
 }
 
+/* piste (les images) */
 .carousel {
   display: flex;
   gap: 16px;
@@ -573,62 +575,40 @@ html {
   padding: 10px 0;
   -ms-overflow-style: none; /* IE/Edge */
   scrollbar-width: none;    /* Firefox */
-  scroll-snap-type: x mandatory; /* pour un défilement plus fluide */
 }
+.carousel::-webkit-scrollbar { display: none; } /* Chrome/Safari */
 
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel a {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-}
-
+/* cartes / images */
+.carousel a { flex: 0 0 auto; text-decoration: none; }
 .carousel img {
   display: block;
-  height: auto;
-  max-height: 320px; /* limite la hauteur */
   width: auto;
-  border-radius: 4px;
+  height: auto;
+  max-height: 320px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
-/* flèches sans fond, sans ombre, juste zone cliquable */
+/* flèches : dans l'espace blanc, sans effet bouton */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none; /* pas de fond */
+  border: none;     /* pas de bordure */
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
   z-index: 30;
 }
-
 .carousel-btn:focus {
-  outline: none !important;
+  outline: none; /* pas de contour au clic */
 }
 
-.carousel-btn.left {
-  left: 12px;
-}
+/* position des flèches */
+.carousel-btn.left  { left: 12px; }
+.carousel-btn.right { right: 12px; }
 
-.carousel-btn.right {
-  right: 12px;
-}
-
-.carousel-btn svg {
-  width: 24px;
-  height: 24px;
-  stroke: #d21b1b; /* rouge */
-  stroke-width: 1.5;
-  fill: none;
-}
