@@ -37,34 +37,43 @@
 
 <header>
 
- <main>
-  <section id="work">
-  <h2>Work</h2>
-  <div class="gallery">
+ <section id="WORK">
+  <h2>WORK</h2>
 
-    <a href="NYC.html">
-      <img src="Images/NYC.png" alt="New York City Water Towers">
-    </a>
+  <div class="carousel">
 
-    <a href="TT.html">
-      <img src="Images/Tactileties.png" alt="Tactile Ties">
-    </a>
+    <!-- Inputs radio invisibles -->
+    <input type="radio" name="slides" id="slide1" checked>
+    <input type="radio" name="slides" id="slide2">
+    <input type="radio" name="slides" id="slide3">
+    <input type="radio" name="slides" id="slide4">
+    <input type="radio" name="slides" id="slide5">
 
-    <a href="Polaris.html">
-      <img src="Images/Polaris.png" alt="Polaris">
-    </a>
+    <!-- Conteneur des images -->
+    <div class="slides">
+      <div class="slide"><a href="NYC.html"><img src="Images/NYC.png" alt="New York City Water Towers"></a></div>
+      <div class="slide"><a href="TT.html"><img src="Images/Tactileties.png" alt="Tactile Ties"></a></div>
+      <div class="slide"><a href="Polaris.html"><img src="Images/Polaris.png" alt="Polaris"></a></div>
+      <div class="slide"><a href="Kaurna.html"><img src="Images/Kaurna.png" alt="Kaurna"></a></div>
+      <div class="slide"><a href="L'oiseau.html"><img src="Images/l'oiseau.png" alt="L'oiseau"></a></div>
+    </div>
 
-    <a href="Kaurna.html">
-      <img src="Images/Kaurna.png" alt="Kaurna">
-    </a>
+    <!-- Flèche gauche unique -->
+    <label for="slide5" class="prev prev1">&#9664;</label>
+    <label for="slide1" class="prev prev2">&#9664;</label>
+    <label for="slide2" class="prev prev3">&#9664;</label>
+    <label for="slide3" class="prev prev4">&#9664;</label>
+    <label for="slide4" class="prev prev5">&#9664;</label>
 
-    <a href="L'oiseau.html">
-      <img src="Images/l'oiseau.png" alt="L'oiseau">
-    </a>
+    <!-- Flèche droite unique -->
+    <label for="slide2" class="next next1">&#9654;</label>
+    <label for="slide3" class="next next2">&#9654;</label>
+    <label for="slide4" class="next next3">&#9654;</label>
+    <label for="slide5" class="next next4">&#9654;</label>
+    <label for="slide1" class="next next5">&#9654;</label>
 
   </div>
 </section>
-
 
 
     <section id="contact">
@@ -89,6 +98,7 @@
 
 </body>
 </html>
+
 
 
 
