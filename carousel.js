@@ -2,9 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const carousel = document.querySelector('.carousel');
   const prevBtn = document.getElementById('prev');
   const nextBtn = document.getElementById('next');
-  if (!carousel || !prevBtn || !nextBtn) return;
 
-  // calcul propre de la largeur "une carte + gap"
   function getGap() {
     const gap = getComputedStyle(carousel).gap;
     return gap ? parseFloat(gap) : 16;
