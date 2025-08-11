@@ -453,13 +453,80 @@ html {
   transform: scale(1.1);
 
 }
-
-.carousel-container {
+.carousel {
   position: relative;
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  width: 1500px; /* 5 images * 300px */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides a {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+/* Cacher les inputs radio */
+.carousel input[type="radio"] {
+  display: none;
+}
+
+/* Position des flèches */
+.arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* par défaut, on bloque les clics */
+}
+
+.arrow {
+  font-size: 2rem;
+  color: red;
+  cursor: pointer;
+  pointer-events: auto; /* on réactive sur les flèches */
+  user-select: none;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* Position flèches prev et next */
+.arrow.prev {
+  margin-left: 5px;
+}
+
+.arrow.next {
+  margin-right: 5px;
+}
+
+/* Gérer le déplacement des slides selon l’input coché */
+
+#slide1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-300px);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-600px);
+}
+
+#slide4:checked ~ .slides {
+  transform: translateX(-900px);
+}
+
+#slide5:checked ~ .slides {
+  transform: translateX(-1200px);
 }
 
 .project-thumbs {
@@ -557,6 +624,7 @@ html {
     width: 180px;
   }
 }
+
 
 
 
