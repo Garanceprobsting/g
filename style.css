@@ -174,7 +174,7 @@ nav a:hover {
 }
 
 .gallery a img {
-  width: 200px;                /* ← fixe une largeur pour garantir le débordement */
+  width: 300px;                /* ← fixe une largeur pour garantir le débordement */
   height: auto;
   border-radius: 8px;
   display: block;
@@ -557,7 +557,7 @@ html {
     width: 180px;
   }
 
-  /* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
+ /* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
 .carousel-wrapper {
   position: relative;
   max-width: 1000px; /* adapte si besoin */
@@ -572,44 +572,48 @@ html {
   gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 10px 0;
+  padding: 10px 0; /* pas de padding horizontal ici, on a le wrapper pour ça */
   -ms-overflow-style: none; /* IE/Edge */
   scrollbar-width: none;    /* Firefox */
 }
-.carousel::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+.carousel::-webkit-scrollbar { display: none; height: 0; } /* Chrome/Safari */
 
 /* cartes / images */
 .carousel a { flex: 0 0 auto; text-decoration: none; }
 .carousel img {
   display: block;
-  width: auto;
+  width: auto;       /* on ne force pas la largeur */
   height: auto;
-  max-height: 320px;
+  max-height: 320px; /* limite la hauteur pour garder une ligne propre */
   object-fit: cover;
   border-radius: 4px;
 }
 
-/* flèches : dans l'espace blanc, sans effet bouton */
+/* flèches : dans l'espace blanc (grâce au padding du wrapper) */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none; /* pas de fond */
-  border: none;     /* pas de bordure */
-  padding: 0;
-  margin: 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.95);
+  font-size: 22px;
+  color: #d21b1b; /* rouge */
   cursor: pointer;
   z-index: 30;
-}
-.carousel-btn:focus {
-  outline: none; /* pas de contour au clic */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* position des flèches */
-.carousel-btn.left  { left: 12px; }
+/* On place les boutons dans la zone blanche (padding) du wrapper */
+.carousel-btn.left  { left: 12px; }  /* visible dans la zone blanche réservée */
 .carousel-btn.right { right: 12px; }
+
+/* petit style focus pour accessibilité */
+.carousel-btn:focus { outline: 2px solid rgba(210,27,27,0.25); }
 
 
