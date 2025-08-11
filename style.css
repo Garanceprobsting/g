@@ -529,7 +529,7 @@ html {
 /* Version mobile : max 768px */
 @media (max-width: 500px) {
   .intro-text {
-    font-size: 60px; /* Texte d'intro plus petit */
+    font-size: 80px; /* Texte d'intro plus petit */
     line-height: 1.2;
   }
 
@@ -802,6 +802,7 @@ h1 {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 
 
 
