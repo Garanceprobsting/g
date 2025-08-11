@@ -615,11 +615,11 @@ html {
 /* petit style focus pour accessibilité */
 .carousel-btn:focus { outline: 2px solid rgba(210,27,27,0.25); }
 .carousel-wrapper {
-  max-width: none;
-  width: 100%;
-  padding: 0 60px;
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 60px; /* espace blanc pour flèches */
   box-sizing: border-box;
-
 }
 
 .carousel {
@@ -645,6 +645,8 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -656,22 +658,3 @@ html {
 
 .carousel-btn.left { left: 12px; }
 .carousel-btn.right { right: 12px; }
-}
-
-main, section#work, .carousel-wrapper {
-  max-width: none !important;
-  width: 95vw !important;
-  padding: 0 20px !important;
-}
-
-
-#work {
-  max-width: 100%;
-  width: 100vw;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-
