@@ -582,9 +582,8 @@ html {
 .carousel a { flex: 0 0 auto; text-decoration: none; }
 .carousel img {
   display: block;
-  width: auto;       /* on ne force pas la largeur */
-  height: auto;
-  max-height: 200px; /* limite la hauteur pour garder une ligne propre */
+  height: 200px; /* hauteur fixe */
+  width: auto;   /* largeur auto pour garder proportions */
   object-fit: cover;
   border-radius: 4px;
 }
@@ -605,4 +604,5 @@ html {
 
 .carousel-btn.left { left: 12px; }
 .carousel-btn.right { right: 12px; }
+
 
