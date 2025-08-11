@@ -584,7 +584,7 @@ html {
   display: block;
   width: auto;       /* on ne force pas la largeur */
   height: auto;
-  max-height: 320px; /* limite la hauteur pour garder une ligne propre */
+  max-height: 200px; /* limite la hauteur pour garder une ligne propre */
   object-fit: cover;
   border-radius: 4px;
 }
@@ -615,5 +615,6 @@ html {
 
 /* petit style focus pour accessibilité */
 .carousel-btn:focus { outline: 2px solid rgba(210,27,27,0.25); }
+
 
 
