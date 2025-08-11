@@ -747,7 +747,7 @@ html {
   }
   
 .carousel img {
-  max-height: 320px; /* tu peux augmenter si tu veux */
+  max-height: 400px; /* tu peux augmenter si tu veux */
   width: auto;
   height: auto;
   border-radius: 4px;
@@ -756,10 +756,10 @@ html {
 }
 
 .carousel-btn.left {
-  left: -20px; /* très proche du bord */
+  left: -50px; /* très proche du bord */
 }
 .carousel-btn.right {
-  right: -20px;
+  right: -50px;
 }
 .carousel-btn {
   width: 40px;
@@ -787,6 +787,7 @@ html {
   scrollbar-width: none;
   width: 100%; /* prends toute la largeur */
 }
+
 
 
 
