@@ -660,18 +660,105 @@ html {
 .carousel-btn.right { right: 12px; }
 
 @media (max-width: 600px) {
+.carousel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 60px; /* espace pour flèches */
+  box-sizing: border-box;
+  overflow: visible; /* important pour que flèches dépassent si besoin */
+}
+
+/* piste (images) */
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+  height: 0;
+}
+
+/* cartes/images */
+.carousel a {
+  flex: 0 0 auto;
+  text-decoration: none;
+}
+
+.carousel img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* flèches */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 30;
+  width: 40px;  /* taille fixe pour flèches */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto; /* pour s’assurer que le clic passe bien */
+}
+
+/* position flèches */
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+/* focus accessibilité */
+.carousel-btn:focus {
+  outline: 2px solid rgba(210, 27, 27, 0.25);
+}
+
+/* MEDIA QUERY pour mobile */
+@media (max-width: 700px) {
   .carousel-wrapper {
-    max-width: 100% !important;  /* prend toute la largeur possible */
-    padding: 0 10px !important;  /* moins de padding pour gagner de la place */
-    margin: 0 auto !important;
+    max-width: 100% !important;
+    padding: 0 40px !important; /* un peu moins d’espace pour les flèches */
+  }
+  
+  .carousel img {
+    max-height: 180px !important;
+    max-width: 100% !important;
   }
 
-  .carousel img {
-    max-height: 180px !important; /* image un peu plus petite pour mobile */
-    max-width: 100% !important;   /* éviter que ça dépasse */
-    height: auto !important;
-    width: auto !important;
+  .carousel-btn {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  /* pour s’assurer que les flèches restent bien en dehors des images */
+  .carousel-btn.left {
+    left: 5px !important;
+  }
+  
+  .carousel-btn.right {
+    right: 5px !important;
   }
 }
+
 
 
