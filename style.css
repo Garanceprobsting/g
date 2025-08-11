@@ -555,124 +555,48 @@ html {
   .gallery a img {
     width: 180px;
   }
-
- /* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
+}
 .carousel-wrapper {
   position: relative;
-  max-width: 1000px; /* adapte si besoin */
-  margin: 30px auto;
-  padding: 0 60px; /* <-- important : réserve l'espace pour les flèches */
-  box-sizing: border-box;
+  max-width: 900px; /* adapte si tu veux plus large */
+  margin: auto;
 }
 
-/* piste (les images) */
 .carousel {
   display: flex;
-  gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 10px 0; /* pas de padding horizontal ici, on a le wrapper pour ça */
-  -ms-overflow-style: none; /* IE/Edge */
-  scrollbar-width: none;    /* Firefox */
+  gap: 10px;
+  padding: 10px 40px; /* espace pour les flèches */
 }
-.carousel::-webkit-scrollbar { display: none; height: 0; } /* Chrome/Safari */
 
-/* cartes / images */
-.carousel a { flex: 0 0 auto; text-decoration: none; }
-.carousel img {
-  display: block;
-  height: 200px; /* hauteur fixe */
-  width: 300px;   /* largeur auto pour garder proportions */
-  object-fit: cover;
-  border-radius: 4px;
+.carousel a {
+  flex: 0 0 auto;
 }
+
+.carousel img {
+  width: auto;
+  height: auto;
+  max-height: 300px; /* garde la taille raisonnable */
+  display: block;
+}
+
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none; /* pas de fond */
-  border: none;     /* pas de bordure */
-  padding: 0;
-  margin: 0;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
   cursor: pointer;
-  z-index: 30;
-}
-.carousel-btn:focus {
-  outline: none; /* pas de contour au clic */
+  color: red;
+  z-index: 10;
 }
 
-.carousel-btn.left { left: 12px; }
-.carousel-btn.right { right: 12px; }
-
-  /* ===== FIX CAROUSEL / GALLERY OVERRIDE (mettre à la fin du style.css) ===== */
-
-.carousel-wrapper {
-  position: relative;
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 60px; /* espace pour flèches */
-  box-sizing: border-box;
-  overflow: visible;
+.carousel-btn.left {
+  left: 0;
 }
 
-/* piste (les images) */
-.carousel,
-.gallery {                          /* applique aux deux si tu utilises encore .gallery */
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  gap: 16px !important;
-  overflow-x: auto !important;
-  scroll-behavior: smooth !important;
-  padding: 10px 0 !important;
-  -ms-overflow-style: none !important;
-  scrollbar-width: none !important;
+.carousel-btn.right {
+  right: 0;
 }
-.carousel::-webkit-scrollbar,
-.gallery::-webkit-scrollbar { display: none !important; }
-
-/* cartes / images : forcer taille raisonnable */
-.carousel a, .gallery a {
-  flex: 0 0 auto !important;
-  text-decoration: none !important;
-}
-
-/* <-- LA RÈGLE CLAIRTE : limite à la fois largeur et hauteur */
-.carousel img,
-.gallery img {
-  display: block !important;
-  max-height: 220px !important;   /* hauteur max pour toutes les images */
-  max-width: 320px !important;    /* largeur max */
-  width: auto !important;
-  height: auto !important;
-  object-fit: cover !important;
-  border-radius: 4px !important;
-}
-
-/* flèches : zone cliquable invisible (seulement SVG visible) */
-.carousel-btn {
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  width: 44px !important;
-  height: 44px !important;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  cursor: pointer !important;
-  z-index: 999 !important;
-}
-.carousel-btn:focus { outline: none !important; }
-.carousel-btn.left  { left: 12px !important; }
-.carousel-btn.right { right: 12px !important; }
-
-/* sécurité : si une règle ancienne applique width:100% */
-.carousel a img,
-.gallery a img { max-width: 100% !important; box-sizing: border-box !important; }
-
-
-
-
-
