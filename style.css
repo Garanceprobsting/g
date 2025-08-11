@@ -645,8 +645,6 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -658,3 +656,4 @@ html {
 
 .carousel-btn.left { left: 12px; }
 .carousel-btn.right { right: 12px; }
+
