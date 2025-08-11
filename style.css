@@ -616,7 +616,8 @@ html {
 .carousel-btn:focus { outline: 2px solid rgba(210,27,27,0.25); }
 .carousel-wrapper {
   position: relative;
-  max-width: 1000px;
+  max-width: 1200px;
+  width: 90vw;
   margin: 30px auto;
   padding: 0 60px; /* espace blanc pour flèches */
   box-sizing: border-box;
@@ -656,4 +657,13 @@ html {
 
 .carousel-btn.left { left: 12px; }
 .carousel-btn.right { right: 12px; }
+}
+
+main, section#work, .carousel-wrapper {
+  max-width: none !important;
+  width: 95vw !important;
+  padding: 0 20px !important;
+}
+
+
 
