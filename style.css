@@ -529,11 +529,37 @@ html {
 #CONTACT p { margin: .5rem 0; max-width:720px; }
 #CONTACT a { display:inline-block; margin:.25rem 0; }
 }
-@media (max-width: 100px) {
-  .gallery,
-  .project-thumbs {
-    max-height: 100px; /* enlève une éventuelle limite de hauteur */
-    padding: 1rem 0; /* un peu d’air autour */
+/* Version mobile : max 768px */
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 40px; /* Texte d'intro plus petit */
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 40px; /* Work / Contact plus petits */
+  }
+
+  .gallery a img {
+    width: 150px; /* Images réduites */
+  }
+}
+
+/* Version très petit écran : max 480px */
+@media (max-width: 480px) {
+  .intro-text {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .gallery a img {
+    width: 120px;
+  }
+}
+
 
 
 
