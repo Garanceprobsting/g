@@ -544,18 +544,6 @@ html {
 
 /* Version très petit écran : max 480px */
 @media (max-width: 480px) {
-  .intro-text {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  .gallery a img {
-    width: 180px;
-  }
-}
 /* wrapper : réserve de l'espace latéral pour les flèches (elles restent dans la zone blanche) */
 .carousel-wrapper {
   position: relative;
@@ -736,12 +724,10 @@ html {
 /* MEDIA QUERY pour mobile */
 @media (max-width: 500px) {
   h2 {
-  font-size: 4rem; /* augmente la taille du titre */
-  /* tu peux aussi modifier la graisse, couleur, etc. */
-}
+  font-size: 4rem; 
  .carousel-wrapper {
-  padding: 0 20px; /* réduire fortement, mais garder un peu d’espace pour les flèches */
-  max-width: 1000px; /* ou mettre width: 100% si tu veux que ça prenne toute la largeur */
+  padding: 0 20px; 
+  max-width: 1000px; 
   margin: 30px auto;
   position: relative;
   box-sizing: border-box;
@@ -802,6 +788,7 @@ intro-text {
   font-size: 3rem; /* augmente la taille du titre */
   /* tu peux aussi modifier la graisse, couleur, etc. */
 }
+
 
 
 
