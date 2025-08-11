@@ -658,3 +658,20 @@ html {
 
 .carousel-btn.left { left: 12px; }
 .carousel-btn.right { right: 12px; }
+
+@media (max-width: 600px) {
+  .carousel-wrapper {
+    max-width: 100% !important;  /* prend toute la largeur possible */
+    padding: 0 10px !important;  /* moins de padding pour gagner de la place */
+    margin: 0 auto !important;
+  }
+
+  .carousel img {
+    max-height: 180px !important; /* image un peu plus petite pour mobile */
+    max-width: 100% !important;   /* éviter que ça dépasse */
+    height: auto !important;
+    width: auto !important;
+  }
+}
+
+
