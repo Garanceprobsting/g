@@ -212,7 +212,7 @@ animation: blink 2s infinite;
   }
 }
 #WORK  {
-  scroll-margin-top: 5vh;
+  scroll-margin-top: 10vh;
 
 }
 html {
@@ -560,6 +560,7 @@ html {
     width: 180px;
   }
 }
+
 
 
 
