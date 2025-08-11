@@ -792,6 +792,11 @@ html {
   padding: 0 20px;
   box-sizing: border-box;
 }
+#work h2 {
+  font-size: 10rem; /* augmente la taille du titre */
+  /* tu peux aussi modifier la graisse, couleur, etc. */
+}
+
 
 
 
