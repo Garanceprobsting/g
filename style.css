@@ -614,4 +614,49 @@ html {
 
 /* petit style focus pour accessibilité */
 .carousel-btn:focus { outline: 2px solid rgba(210,27,27,0.25); }
+.carousel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 60px; /* espace blanc pour flèches */
+  box-sizing: border-box;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar { display: none; }
+
+.carousel a { flex: 0 0 auto; }
+.carousel img {
+  display: block;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.carousel-btn.left { left: 12px; }
+.carousel-btn.right { right: 12px; }
+
 
