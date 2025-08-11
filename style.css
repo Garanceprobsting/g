@@ -755,19 +755,27 @@ html {
   display: block;
 }
 
-  .carousel-btn {
-    width: 30px !important;
-    height: 30px !important;
-  }
+.carousel-btn.left {
+  left: 5px; /* très proche du bord */
+}
+.carousel-btn.right {
+  right: 5px;
+}
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  /* pour s’assurer que les flèches restent bien en dehors des images */
-  .carousel-btn.left {
-    left: 5px !important;
-  }
-  
-  .carousel-btn.right {
-    right: 5px !important;
-  }
 }
 .carousel {
   display: flex;
@@ -779,6 +787,7 @@ html {
   scrollbar-width: none;
   width: 100%; /* prends toute la largeur */
 }
+
 
 
 
