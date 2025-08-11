@@ -583,7 +583,7 @@ html {
 .carousel img {
   display: block;
   height: 200px; /* hauteur fixe */
-  width: auto;   /* largeur auto pour garder proportions */
+  width: 300px;   /* largeur auto pour garder proportions */
   object-fit: cover;
   border-radius: 4px;
 }
@@ -604,5 +604,6 @@ html {
 
 .carousel-btn.left { left: 12px; }
 .carousel-btn.right { right: 12px; }
+
 
 
