@@ -588,24 +588,7 @@ html {
   border-radius: 4px;
 }
 
-/* flèches : dans l'espace blanc (grâce au padding du wrapper) */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.95);
-  font-size: 22px;
-  color: #d21b1b; /* rouge */
-  cursor: pointer;
-  z-index: 30;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
 }
 
 /* On place les boutons dans la zone blanche (padding) du wrapper */
@@ -663,6 +646,7 @@ html {
 
 .carousel-btn.left { left: 12px; }
 .carousel-btn.right { right: 12px; }
+
 
 
 
