@@ -735,11 +735,11 @@ html {
 
 /* MEDIA QUERY pour mobile */
 @media (max-width: 500px) {
-  #work h2 {
+  h2 {
   font-size: 4rem; /* augmente la taille du titre */
   /* tu peux aussi modifier la graisse, couleur, etc. */
 }
-#work h1 {
+h1 {
   font-size: 5rem; /* augmente la taille du titre */
   /* tu peux aussi modifier la graisse, couleur, etc. */
 }
@@ -802,6 +802,7 @@ html {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 
 
 
