@@ -733,9 +733,7 @@ html {
 /* focus accessibilité */
 .carousel-btn:focus {
   outline: 2px solid rgba(210, 27, 27, 0.25);
-}s
-/* MEDIA QUERY pour mobile */
-@media (max-width: 500px) {
+}
   h2 {
   font-size: 4rem; 
  .carousel-wrapper {
@@ -801,6 +799,7 @@ html {
     font-size: 3.5rem;
   }
 }
+
 
 
 
