@@ -806,6 +806,29 @@ html {
 }
 
 
+.project-thumbs {
+  display: flex;
+  flex-wrap: wrap;       /* Permet aux images de passer à la ligne */
+  gap: 15px;             /* Espacement entre les images */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;   /* Centre verticalement */
+  margin-top: 20px;
+}
+
+.project-thumbs a {
+  flex: 0 0 auto;        /* Les liens ne se compressent pas */
+  max-width: 150px;      /* Taille max des images */
+  display: block;
+}
+
+.project-thumbs img {
+  width: 100%;           /* L'image remplit son conteneur <a> */
+  height: auto;
+  display: block;
+  border-radius: 6px;    /* Optionnel : coins arrondis */
+  object-fit: cover;     /* Pour éviter déformation */
+}
+
 
 
 
