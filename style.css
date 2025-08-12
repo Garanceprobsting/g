@@ -661,3 +661,155 @@ html {
 
 
 
+@media (max-width: 600px) {
+.carousel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 60px; /* espace pour flèches */
+  box-sizing: border-box;
+  overflow: visible; /* important pour que flèches dépassent si besoin */
+}
+
+/* piste (images) */
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+  height: 0;
+}
+
+/* cartes/images */
+.carousel a {
+  flex: 0 0 auto;
+  text-decoration: none;
+}
+
+.carousel img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* flèches */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 30;
+  width: 40px;  /* taille fixe pour flèches */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto; /* pour s’assurer que le clic passe bien */
+}
+
+/* position flèches */
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+/* focus accessibilité */
+.carousel-btn:focus {
+  outline: 2px solid rgba(210, 27, 27, 0.25);
+}s
+/* MEDIA QUERY pour mobile */
+@media (max-width: 500px) {
+  h2 {
+  font-size: 4rem; 
+ .carousel-wrapper {
+  padding: 0 20px; 
+  max-width: 1000px; 
+  margin: 30px auto;
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+  }
+  
+.carousel img {
+  max-height: 350px; /* tu peux augmenter si tu veux */
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn.left {
+  left: -50px; /* très proche du bord */
+}
+.carousel-btn.right {
+  right: -50px;
+}
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel {
+  display: flex;
+  gap: 10px; /* réduire un peu le gap entre images */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100%; /* prends toute la largeur */
+}
+
+.carousel-wrapper {
+  width: 70vw;
+  margin: 0 auto; /* centre horizontalement */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+/* MEDIA QUERY pour mobile */
+@media (max-width: 500px) {
+  .intro-text {
+    font-size: 3.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
